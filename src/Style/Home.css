@@ -1,0 +1,21 @@
+.home-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.image:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  background-color: color-mix(in srgb, color percentage, color percentage);
+}
+
+.content {
+  flex: 2;
+}

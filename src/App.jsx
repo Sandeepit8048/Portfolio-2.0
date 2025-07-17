@@ -5,6 +5,7 @@ import Skil from './components/Skil'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+// import ReactTyped from 'react-typed'
 import './App.css'
 
 function App() {

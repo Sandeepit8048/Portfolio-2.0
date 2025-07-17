@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import heroImg from '../assets/hero.avif'
 import bgVideo from '../assets/bgvideo.mp4'
 
-function Landingpage() {
+function TypingSection() {
+  const typedElement = useRef(null);
+  const typedInstance = useRef(null);
+
+  useEffect(() => {
+    typedInstance.current = new Typed(typedElement.current, {
+      strings: ['Forntend Developer', 'Backend Developer', 'UI/UX Design'],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true,
+    });
+
+    return () => {
+      // Destroy instance on unmount to prevent memory leaks
+      typedInstance.current.destroy();
+    };
+  }, []);
   return (
     <div className="relative w-full h-screen overflow-hidden" id="home">
       <video
@@ -19,8 +36,13 @@ function Landingpage() {
             Hi There,<br />
             Sandeep <span className="text-blue-400">Kr.Yadav</span>
           </h2>
-          <p className="text-white text-xl mb-6">
-            I am into <span className="text-blue-400 font-semibold typing-text"></span>
+               
+          <p className="text-white text-lg mb-4">
+            I am into -- {' '}
+            <span
+              ref={typedElement}
+              className="text-blue-400 font-semibold"
+            ></span>
           </p>
           <a
             href="#about"
@@ -32,12 +54,12 @@ function Landingpage() {
           <div className="socials mb-6">
             <ul className="flex space-x-4">
               <li>
-                <a className="linkedin text-white hover:text-blue-500" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer " href="https://www.linkedin.com/in/sandeep-kumar-yadav-021668242/">
+                <a className="linkedin text-white hover:text-blue-500" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin text-2xl"></i>
                 </a>
               </li>
               <li>
-                <a className="github text-white hover:text-gray-400" aria-label="GitHub" target="_blank" rel="noopener noreferrer" href='https://github.com/Sandeepit8048'>
+                <a className="github text-white hover:text-gray-400" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github text-2xl"></i>
                 </a>
               </li>
@@ -64,7 +86,7 @@ function Landingpage() {
             </ul>
           </div>
         </div>
-        <div className="flex-1 flex justify-center items-center">
+        <div className="flex-1 flex justify-center items-center" style={{ hover: 'scale(1.05)', transition: 'transform 0.3s ease' }}>
           <img
             draggable="false"
             className="tilt w-64 h-64 object-cover rounded-full shadow-lg"
@@ -77,4 +99,4 @@ function Landingpage() {
   )
 }
 
-export default Landingpage
+export default TypingSection;

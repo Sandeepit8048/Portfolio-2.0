@@ -54,12 +54,12 @@ function TypingSection() {
           <div className="socials mb-6">
             <ul className="flex space-x-4">
               <li>
-                <a className="linkedin text-white hover:text-blue-500" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a className="linkedin text-white hover:text-blue-500" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sandeep-kumar-yadav-021668242/">
                   <i className="fab fa-linkedin text-2xl"></i>
                 </a>
               </li>
               <li>
-                <a className="github text-white hover:text-gray-400" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <a className="github text-white hover:text-gray-400" aria-label="GitHub" target="_blank" rel="noopener noreferrer"href='https://github.com/Sandeepit8048'>
                   <i className="fab fa-github text-2xl"></i>
                 </a>
               </li>
@@ -86,7 +86,7 @@ function TypingSection() {
             </ul>
           </div>
         </div>
-        <div className="flex-1 flex justify-center items-center" style={{ hover: 'scale(1.05)', transition: 'transform 0.3s ease' }}>
+        <div className="flex-1 flex justify-center items-center transition-transform duration-700 hover:scale-105 transform hover:rotate-20 hover:translate-x-2 hover:translate-y-2">
           <img
             draggable="false"
             className="tilt w-64 h-64 object-cover rounded-full shadow-lg"

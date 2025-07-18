@@ -1,8 +1,46 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import Img from '../assets/contactimg.png';
+import Img2 from '../assets/contact.webp';
+import '../Style/Home.css'; 
 function Contact() {
   return (
-    <div>Contact</div>
+    <>
+    <div className="container">
+      <div className="registion ">
+       <h1 className='flex items-center justify-center text-3xl font-bold mb-4 gap-2 mb-6 '> 
+         <FontAwesomeIcon icon={faAddressBook} className="text-blue-600 text-4xl  space-2" />
+           Contact<span>Me</span></h1>
+           <div className="registrationform">
+            <form action="" method="post" className='flex flex-row items-center justify-center'>
+              <div className="form-group  bouder p-4 ">
+                <label htmlFor="name">Name</label>
+               <input type="text" id="name" name="name" required  />  
+              <label htmlFor="Email">E-mail</label>
+              <input type="email" id='email' name='email' required placeholder='email' />
+              <label htmlFor="Number">Number</label>
+              <input type="number" id='number' name='number' required placeholder='Mobile Number' />
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" rows="4" required placeholder='Type your message here...'></textarea>
+              <button type="submit" className='btn bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition'>Send Message</button>
+              </div>
+              <div>
+                <p className='text-center text-gray-500 mt-4'>Feel free to reach out for any queries or collaborations!</p>
+              
+              <div className='text-center mt-4'>
+                <p className='text-gray-500'>Or you can contact me  email at <a href="rkysandeepyadav@gmail.com" className='text-blue-600 hover:underline'>Email</a></p>
+                 <img src={Img} alt="" />
+                  {/* <img src={Img2} alt="" className='w-full h-full mt-4' /> */}
+              </div>
+              </div>
+             
+
+            </form>
+           </div>
+      </div>
+    </div>
+    </>
   )
 }
 

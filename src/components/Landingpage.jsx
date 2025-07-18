@@ -9,7 +9,7 @@ function TypingSection() {
 
   useEffect(() => {
     typedInstance.current = new Typed(typedElement.current, {
-      strings: ['Forntend Developer', 'Backend Developer', 'UI/UX Design'],
+      strings: ['Frontend Developer', 'Backend Developer', 'UI/UX Design'],
       typeSpeed: 80,
       backSpeed: 40,
       loop: true,

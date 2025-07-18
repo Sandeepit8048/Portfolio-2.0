@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <section className="about mt-6 " id="about">
-          <h2 className="heading text-4xl gap-2 flex items-center justify-center">
+          <h2 className="heading text-4xl gap-2 flex items-center justify-center font-bold mb-6">
             <FontAwesomeIcon icon={faUserAlt} className="text-blue-600 text-4l" />
             About <span>Me</span>
          </h2>

@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Skil from './components/Skil'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './App.css'
 
@@ -15,6 +16,9 @@ function App() {
       {/* <Eduction /> */}
       {/* <Skil /> */}
       <Contact />
+      <Footer />
+      {/* <Landingpage /> */}
+     
     </>
   )
 }

@@ -8,16 +8,16 @@ function Contact() {
   
   return (
     <>
-    <div className="container mt-7 ">
-      <div className="registion ">
+    <div className="container mt-7  ">
+      <div className="registion  ">
        <h1 className='flex items-center justify-center text-3xl font-bold mb-4 gap-2 mb-6 '> 
          <FontAwesomeIcon icon={faAddressBook} className="text-blue-600 text-4xl  space-2" />
            Contact<span>Me</span></h1>
                 <p className='text-center text-gray-500 mt-4 text-center'>Feel free to reach out for any queries or collaborations!</p>
                 <p className='text-gray-500 text-center  '>Or you can contact me  email at <a href="rkysandeepyadav@gmail.com" className='text-blue-600 hover:underline '>Email</a></p>
                  <img src={Img} alt="" />
-           <div className="registrationform ">
-            <form action="" method="post" className='flex flex-row items-center justify-center'>
+           <div className="registrationform  ">
+            <form action="" method="post" className='flex flex-row items-center justify-center flex-wrap items-center justify-center'>
               <div className="form-group  bouder p-4 w-full max-w-md ">
                 <h1 className='text-center font-bold text-3xl '>Form</h1>
                 <label htmlFor="name">Name</label>

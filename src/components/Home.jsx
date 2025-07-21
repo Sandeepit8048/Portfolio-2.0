@@ -7,13 +7,13 @@ import '../Style/Home.css'
 function Home() {
   return (
     <>
-      <section className="about mt-6 " id="about">
+      <section className="about p-5 " id="about"  >
           <h2 className="heading text-4xl gap-2 flex items-center justify-center font-bold mb-6">
             <FontAwesomeIcon icon={faUserAlt} className="text-blue-600 text-4l" />
             About <span>Me</span>
          </h2>
-        <div className="row home-row">
-          <div className="image">
+        <div className="row home-row flex-wrap items-center justify-center">
+          <div className="image ">
             <img draggable="false" className="tilt" src={Profile} alt="Profile" />
           </div>
           <div className="content mx-4 p-7 ">

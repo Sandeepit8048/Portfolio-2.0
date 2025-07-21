@@ -9,8 +9,10 @@ function Footer() {
         </p>
         <p className="text-sm">
           Follow me on 
-          <a href="#" className="text-blue-400 hover:underline ml-1">LinkedIn</a> and
-          <a href="#" className="text-blue-400 hover:underline ml-1">GitHub</a>
+          <a href="https://www.linkedin.com/in/sandeep-kumar-yadav-021668242/" className="text-blue-400 hover:underline ml-1">LinkedIn</a> ,
+          <a href="https://github.com/Sandeepit8048" className="text-blue-400 hover:underline ml-1">GitHub</a> and
+          <a href="rkysandeepyadav@gmail.com" className="text-blue-400 hover:underline ml-1">E-mail</a>
+
         </p>
 
     </footer>

@@ -40,7 +40,7 @@ function Home() {
                 rel="noopener noreferrer"
                 className="btn"
               >
-                <span>Resume</span>
+                <span className='text-white' >Resume</span>
                 <i className="fas fa-chevron-right"></i>
               </a>
             </button>

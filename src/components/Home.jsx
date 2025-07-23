@@ -35,7 +35,7 @@ function Home() {
             </div>
             <button className="resumebtn">
               <a
-                href="https://drive.google.com/file/d/1GJGQ1hS7bc4kZxpxeMPi7zEd3OcYMvoA/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1pNtMnUk6MuNu0BrsN7Pm6wVahTFpJtiL/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"

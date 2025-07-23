@@ -30,7 +30,7 @@ function Contact() {
               <textarea id="message" name="message" rows="4" required placeholder='Type your message here...'></textarea>
               <button type="submit" className='btn bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition'>Send Message</button>
               </div>
-                  <img src={Img2} alt="" className='w-[448px] h-[452.5px] '/>
+                  <img src={Img2} alt="" className='w-[448px] h-[452.5px] shadow-lg border border-black-100 rounded-lg '/>
               {/* <div> */}
               
               {/* <div className='text-center mt-4'> */}

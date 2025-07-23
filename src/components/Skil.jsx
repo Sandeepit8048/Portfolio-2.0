@@ -10,6 +10,8 @@ import java from '../assets/java.png';
 import mongodb from '../assets/mongodb.png';
 import SQL from '../assets/sql.png';
 import Postman from '../assets/postman.svg';
+import router from '../assets/router.jpg';
+import CN from '../assets/CN.png';
 function Skil() {
   const [skills, setSkills] = React.useState([
    {  name: 'HTML',
@@ -100,6 +102,13 @@ function Skil() {
     },{
       name : 'Postman', 
       Image: Postman
+    },{
+      name:'react-router',
+      Image: router
+    },
+    {
+      name: 'Computer Networks',
+      Image: CN
     }
 
   ]);
@@ -109,10 +118,10 @@ function Skil() {
      <div className="box  flex-col items-center justify-center p-5 mt-7 flex-wrap text-center">
       <h1 className='text-3xl font-bold mb-4'>Skills</h1>
       <p className='text-gray-500 mb-4'>Here are some of the technologies I have worked with:</p>
-        <div className="grid grid-cols-3 gap-4 mt-4 width[200px] height[200px] overflow-y-auto">
+        <div className="grid grid-cols-3 gap-4 mt-4 ">
           {skills.map((skill, index) => (
-            <div key={index} className="bg-gray-200 p-3 rounded-lg shadow-md hover:bg-gray-300 transition-colors width[200px] flex flex-col items-center">
-              <img src={skill.Image} alt={skill.name}/>
+            <div key={index} className="bg-gray-200 p-3 rounded-lg shadow-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+              <img src={skill.Image} alt={skill.name} className='w-[200px] h-[200px]' />
               <h2 className='text-xl font-semibold'>{skill.name}</h2>
             </div>
           ))}

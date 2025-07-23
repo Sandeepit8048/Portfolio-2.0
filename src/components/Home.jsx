@@ -14,7 +14,7 @@ function Home() {
          </h2>
         <div className="row home-row flex-wrap items-center justify-center">
           <div className="image ">
-            <img draggable="false" className="tilt" src={Profile} alt="Profile" />
+            <img draggable="false" className="tilt " src={Profile} alt="Profile"  />
           </div>
           <div className="content mx-4 p-7 ">
             <h3>I'm Sandeep</h3>

@@ -13,9 +13,9 @@ function App() {
     <>
       <Navbar />
       <Home />
-      {/* <Eduction /> */}
       <Contact />
       <Skil />
+      <Eduction />
       <Footer />
       {/* <Landingpage /> */}
      

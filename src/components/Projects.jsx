@@ -5,6 +5,7 @@ import Crypto from '../assets/crypto.svg'
 import Ecommerce from '../assets/e-commerce.webp';
 import Web from '../assets/web.webp'
 import car from '../assets/car-finder.jpg'
+import Canteen from '../assets/canteen.webp'
 function Projects() {
     const [projects, setProjects] = useState([
         {
@@ -41,6 +42,13 @@ function Projects() {
             technologies: ['React', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS'],
             Image: car,
             link: 'https://car-finder-eta.vercel.app/'
+        },
+        {
+            title: 'Canteen Management System',
+            description: 'A canteen management system that allows users to order food online.',
+            technologies: ['React', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS'],
+            Image: Canteen,
+            link: 'https://https-github-com-sandeepit8048-canteen.vercel.app/'
         }
     ]);
   return (
@@ -54,7 +62,7 @@ function Projects() {
             <h2 className='text-xl font-semibold'>{project.title}</h2>
             <p className='text-gray-600'>{project.description}</p>
             <p className='text-gray-600'>Technologies: {project.technologies.join(', ')}</p>
-            {project.link && <p className='text-gray-600 text-2xl weight-bold flex flex-col items-center '><img src={project.Image} alt={project.Image} /><a href={project.link}>View Project</a></p>}
+            {project.link && <p className='text-gray-600 text-xl weight-bold flex flex-col items-center '><img src={project.Image} alt={project.Image} /><a href={project.link}>View Project</a></p>}
           </div>
         ))} 
         </div>

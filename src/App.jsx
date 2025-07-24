@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './App.css'
+import Projects from './components/Projects'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Contact />
       <Skil />
       <Eduction />
+      <Projects />
       <Footer />
       {/* <Landingpage /> */}
      

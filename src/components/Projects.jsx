@@ -49,6 +49,12 @@ function Projects() {
             technologies: ['React', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS'],
             Image: Canteen,
             link: 'https://https-github-com-sandeepit8048-canteen.vercel.app/'
+        },
+        {
+            title: 'Project 50+',
+            description: 'A collection of 50+ projects showcasing various web development skills.',
+            technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Next.js', 'Redux', 'Tailwind CSS', 'Bootstrap',  'Axios', 'Postman', 'Git', 'GitHub'],
+            
         }
     ]);
   return (

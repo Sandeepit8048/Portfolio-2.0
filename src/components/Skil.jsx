@@ -119,8 +119,8 @@ function Skil() {
     <>
      <div className="box  flex-col items-center justify-center p-5 mt-7 flex-wrap text-center">
       <div className="flex items-center justify-center font-bold text-3xl mb-4 gap-2 ">
-        <GiSkills  className="text-blue-600 text-4xl  space-2"/>
-      <h1 className=' font-bold '>Skills</h1>
+        <GiSkills className=' text-orange-500 bold-4xl '  />
+      <h1 className='font-bold  text-center'>Skills</h1>
       </div>
       <p className='text-gray-500 mb-4'>Here are some of the technologies I have worked with:</p>
         <div className="grid grid-cols-3 gap-4 mt-4 ">

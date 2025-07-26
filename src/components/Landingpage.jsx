@@ -87,12 +87,12 @@ function TypingSection() {
             </ul>
           </div>
         </div>
-        <div className="flex-1 flex justify-center items-center  ">
+        <div className="flex-1 flex justify-center items-center ">
          <DotLottieReact
-            src="https://lottie.host/0088bf16-17a1-4661-9e5d-118d7a78452d/bDyvVNRLFY.lottie"
-            loop
-            autoplay
-          />
+          src="https://lottie.host/0088bf16-17a1-4661-9e5d-118d7a78452d/bDyvVNRLFY.lottie"
+          loop
+          autoplay
+        />
         </div>
       </div>
     </div>

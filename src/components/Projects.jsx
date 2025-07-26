@@ -6,7 +6,7 @@ import Ecommerce from '../assets/e-commerce.webp';
 import Web from '../assets/web.webp'
 import car from '../assets/car-finder.jpg'
 import Canteen from '../assets/canteen.webp'
-
+import { GoProjectSymlink } from "react-icons/go";
 
 function Projects() {
     const [projects, setProjects] = useState([
@@ -62,7 +62,11 @@ function Projects() {
 return (
     <>
     <div className="card p-5 mt-7 flex-col items-center justify-center">
-      <h1 className='text-3xl font-bold mb-4 text-center'>Projects</h1>
+      <div className='flex items-center justify-center font-bold text-3xl mb-4 gap-2 '>
+        <GoProjectSymlink className=' text-4xl  space-2'/>
+      <h1 className=' font-bold  text-center'>Projects</h1> 
+      </div>
+      
       <p className='text-gray-500 mb-4 text-center'>Here are some of my projects:</p>
       <div className="project-list grid grid-cols-2 gap-4 mt-4 ">
         {projects.map((project, index) => (

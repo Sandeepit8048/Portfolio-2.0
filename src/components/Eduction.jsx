@@ -2,7 +2,31 @@ import React from 'react'
 import { FcReadingEbook } from "react-icons/fc";
 import { TbCertificate } from "react-icons/tb";
 import { GiAchievement } from "react-icons/gi";
+import { FaBriefcase, FaArrowRight } from "react-icons/fa";
 function Eduction() {
+ const experiences = [
+  {
+    company: "Self Employed",
+    role: "Full Stack Developer",
+    duration: "Oct 2023 - present",
+  },
+  {
+    company: "Tejoverse Creative Solutions",
+    role: "Frontend Development | Internship",
+    duration: "June 2023 – August 2023",
+  },
+  {
+    company: "10X Bulls ",
+    role: "Website Developer | Internship",
+    duration: "Sep. 2024 – March.2025",
+  },
+  {
+    company: "Hackathon Participate",
+    role: "Event| CodeFest 2023",
+    duration: "Year: 2023",
+  },
+
+];
   return (
     <>
     <div className="card  p-5 mt-7 flex-col items-center justify-center">
@@ -60,7 +84,7 @@ function Eduction() {
         </div>
       </div>
 
-    <div className="card  p-5 mt-7 flex-col items-center justify-center">
+    {/* <div className="card  p-5 mt-7 flex-col items-center justify-center">
       <div className='flex items-center justify-center font-bold text-3xl mb-4 gap-2 '>
         <GiAchievement className='text-5xl  '/> 
       <h1 className=' font-bold  text-center'>Achievements</h1>
@@ -84,7 +108,50 @@ function Eduction() {
           <p className='text-gray-600'>Year: 2023</p>
         </div>
         </div>
+      </div> */}
+          <section id="experience" className="mt-20 px-4">
+      <h2 className="text-3xl font-bold flex items-center justify-center gap-3 mb-10">
+        <FaBriefcase className="text-orange-500" />
+        Experience
+      </h2>
+
+      <div className="relative max-w-5xl mx-auto before:content-[''] before:absolute before:w-1 before:bg-indigo-900 before:top-0 before:bottom-0 before:left-1/2 before:-translate-x-1/2 z-0">
+        {experiences.map((exp, index) => {
+          const isLeft = index % 2 === 0;
+          return (
+            <div
+              key={index}
+              className={`relative w-full md:w-1/2 px-4 mb-8 ${
+                isLeft ? "md:pr-10 md:ml-0 md:left-0" : "md:pl-10 md:left-1/2"
+              }`}
+            >
+              <div
+                className={`absolute top-3 w-6 h-6 bg-white border-4 border-orange-500 rounded-full z-10 ${
+                  isLeft ? "right-[-12px]" : "left-[-12px]"
+                }`}
+              />
+              <div className="bg-orange-500 text-white rounded-lg shadow-md p-4">
+                <h2 className="text-lg font-semibold">{exp.company}</h2>
+                <h3 className="text-xl font-bold mt-2">{exp.role}</h3>
+                <p className="text-sm mt-1">{exp.duration}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+      <div className="flex justify-center mt-10">
+        <a
+          href="/experience"
+          className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition"
+        >
+          View All
+          <FaArrowRight />
+        </a>
+      </div>
+    </section>
+
+
     </>
   )
 }

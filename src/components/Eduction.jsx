@@ -1,10 +1,15 @@
 import React from 'react'
-
+import { FcReadingEbook } from "react-icons/fc";
+import { TbCertificate } from "react-icons/tb";
+import { GiAchievement } from "react-icons/gi";
 function Eduction() {
   return (
     <>
     <div className="card  p-5 mt-7 flex-col items-center justify-center">
-      <h1 className='text-3xl font-bold mb-4 text-center'>Education</h1>
+      <div className='flex items-center justify-center font-bold text-3xl mb-4 gap-2 '>
+        <FcReadingEbook  className='text-5xl '/>
+      <h1 className=' font-bold  text-center'>Education</h1>
+      </div>
       <p className='text-gray-500 mb-4 text-center'>Here are my educational qualifications:</p>
       <div className="education-list">
         <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4">
@@ -28,7 +33,10 @@ function Eduction() {
     </div>
 
     <div className="card  p-5 mt-7 flex-col items-center justify-center">
-      <h1 className='text-3xl font-bold mb-4 text-center'>Certifications</h1>
+      <div className='flex items-center justify-center font-bold text-3xl mb-4 gap-2 '>
+        <TbCertificate className='text-5xl  '/>
+      <h1 className=' font-bold  text-center'>Certifications</h1>
+      </div>
       <p className='text-gray-500 mb-4 text-center'>Here are some of the certifications I have completed:</p>
       <div className="certification-list">    
         <div className="certification-item bg-gray-200 p-4 rounded-lg shadow-md mb-4">
@@ -53,7 +61,10 @@ function Eduction() {
       </div>
 
     <div className="card  p-5 mt-7 flex-col items-center justify-center">
-      <h1 className='text-3xl font-bold mb-4 text-center'>Achievements</h1>
+      <div className='flex items-center justify-center font-bold text-3xl mb-4 gap-2 '>
+        <GiAchievement className='text-5xl  '/> 
+      <h1 className=' font-bold  text-center'>Achievements</h1>
+      </div>
       <p className='text-gray-500 mb-4 text-center'>Here are some of my achievements:</p>
         <div className="achievement-item bg-gray-200 p-4 rounded-lg shadow-md mb-4">
           <h2 className='text-xl font-semibold'>Internship</h2>

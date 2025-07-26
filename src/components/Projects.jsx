@@ -6,6 +6,8 @@ import Ecommerce from '../assets/e-commerce.webp';
 import Web from '../assets/web.webp'
 import car from '../assets/car-finder.jpg'
 import Canteen from '../assets/canteen.webp'
+
+
 function Projects() {
     const [projects, setProjects] = useState([
         {
@@ -54,10 +56,10 @@ function Projects() {
             title: 'Project 50+',
             description: 'A collection of 50+ projects showcasing various web development skills.',
             technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Next.js', 'Redux', 'Tailwind CSS', 'Bootstrap',  'Axios', 'Postman', 'Git', 'GitHub'],
-            
+            // style: 'bg-gray-600 p-4 rounded-lg shadow-md mb-4 hover:shadow-lg transition-shadow duration-300 text-center weight-bold ',
         }
     ]);
-  return (
+return (
     <>
     <div className="card p-5 mt-7 flex-col items-center justify-center">
       <h1 className='text-3xl font-bold mb-4 text-center'>Projects</h1>
@@ -68,7 +70,7 @@ function Projects() {
             <h2 className='text-xl font-semibold'>{project.title}</h2>
             <p className='text-gray-600'>{project.description}</p>
             <p className='text-gray-600'>Technologies: {project.technologies.join(', ')}</p>
-            {project.link && <p className='text-gray-600 text-xl weight-bold flex flex-col items-center '><img src={project.Image} alt={project.Image} /><a href={project.link}>View Project</a></p>}
+            {project.link   &&  <p className='text-gray-600 text-xl weight-bold flex flex-col items-center p-2  shadow-md'><img src={project.Image} alt={project.Image}  /><a href={project.link} >View Project</a></p>}
           </div>
         ))} 
         </div>

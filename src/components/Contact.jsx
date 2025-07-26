@@ -4,6 +4,7 @@ import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import Img from '../assets/contactimg.png';
 import Img2 from '../assets/img2.avif';
 import '../Style/Home.css'; 
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 function Contact() {
   
   return (
@@ -30,8 +31,13 @@ function Contact() {
               <textarea id="message" name="message" rows="4" required placeholder='Type your message here...'></textarea>
               <button type="submit" className='btn bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition'>Send Message</button>
               </div>
-                  <img src={Img2} alt="" className='w-[448px] h-[452.5px] shadow-lg border border-black-100 rounded-lg '/>
-              {/* <div> */}
+              <div className="image-container w-[502px] h-[380px] ">
+                <DotLottieReact
+                        src="https://lottie.host/69289ece-f8f2-4ced-a7a9-260ee4c57f14/J4gMSjiu3T.lottie"
+                        loop
+                        autoplay
+                      />
+                </div>
               
               {/* <div className='text-center mt-4'> */}
               {/* </div> */}

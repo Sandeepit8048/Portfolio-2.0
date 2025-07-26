@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import heroImg from '../assets/hero.avif'
 import bgVideo from '../assets/bgvideo.mp4'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function TypingSection() {
   const typedElement = useRef(null);
@@ -86,12 +87,11 @@ function TypingSection() {
             </ul>
           </div>
         </div>
-        <div className="flex-1 flex justify-center items-center transition-transform duration-700 hover:scale-105 transform hover:rotate-20 hover:translate-x-2 hover:translate-y-2">
-          <img
-            draggable="false"
-            className="tilt w-64 h-64 object-cover rounded-full shadow-lg"
-            src={heroImg}
-            alt="Hero"
+        <div className="flex-1 flex justify-center items-center  ">
+         <DotLottieReact
+            src="https://lottie.host/0088bf16-17a1-4661-9e5d-118d7a78452d/bDyvVNRLFY.lottie"
+            loop
+            autoplay
           />
         </div>
       </div>

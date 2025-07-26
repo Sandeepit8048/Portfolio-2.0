@@ -3,6 +3,9 @@ import { FcReadingEbook } from "react-icons/fc";
 import { TbCertificate } from "react-icons/tb";
 import { GiAchievement } from "react-icons/gi";
 import { FaBriefcase, FaArrowRight } from "react-icons/fa";
+import IMS from '../assets/ims.jpeg';
+import KVN from '../assets/kvn.avif';
+import SHPS from '../assets/shps.jpg';
 function Eduction() {
  const experiences = [
   {
@@ -36,22 +39,35 @@ function Eduction() {
       </div>
       <p className='text-gray-500 mb-4 text-center'>Here are my educational qualifications:</p>
       <div className="education-list">
-        <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4">
-          <h2 className='text-xl font-semibold'>Bachelor of Technology in Information Technology</h2>
-          <p className='text-gray-600'>Institute: IMSEC, Ghaziabad</p>
-          <p className='text-gray-600'>Year: 2021-2025--(1-Div)</p>
-          {/* <p className='text-gray-600'>I-Div</p> */}
+      <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4 flex gap-6 items-center">
+     <img src={IMS} alt="IMS" className="w-[400px] h-[150px]    " />
+     <div>
+    <h2 className="text-xl font-semibold">Bachelor of Technology in Information Technology</h2>
+    <p className="text-gray-600">Institute: IMSEC, Ghaziabad</p>
+    <p className="text-gray-600">Year: 2021-2025 -- (1-Div)</p>
+    {/* <p className='text-gray-600'>I-Div</p> */}
+    </div>
+   </div>
 
-        </div>
         <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4">
+      <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4 flex gap-6 items-center"> 
+           <img src={KVN} alt="KVN" className="w-[400px] h-[150px]  " />
+          <div>
           <h2 className='text-xl font-semibold'>High School</h2>
           <p className='text-gray-600'>School: Kvn public School, Varanasi</p>
           <p className='text-gray-600'>Year:  2020</p>
+          </div>
+        </div>
         </div>
         <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4">
+      <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md mb-4 flex gap-6 items-center">
+          <img src={SHPS} alt="SHPS" className="w-[400px] h-[150px]  " />
+          <div>
           <h2 className='text-xl font-semibold'> School-(1 to 10th Class)</h2>
           <p className='text-gray-600'>School: Swami Harsewanad public School, Varanasi</p>
           <p className='text-gray-600'>Year:  2020</p>
+          </div>
+          </div>
         </div>
         </div>
     </div>
@@ -109,37 +125,36 @@ function Eduction() {
         </div>
         </div>
       </div> */}
-          <section id="experience" className="mt-20 px-4">
-      <h2 className="text-3xl font-bold flex items-center justify-center gap-3 mb-10">
-        <FaBriefcase className="text-orange-500" />
-        Experience
-      </h2>
 
-      <div className="relative max-w-5xl mx-auto before:content-[''] before:absolute before:w-1 before:bg-indigo-900 before:top-0 before:bottom-0 before:left-1/2 before:-translate-x-1/2 z-0">
-        {experiences.map((exp, index) => {
-          const isLeft = index % 2 === 0;
-          return (
-            <div
-              key={index}
-              className={`relative w-full md:w-1/2 px-4 mb-8 ${
-                isLeft ? "md:pr-10 md:ml-0 md:left-0" : "md:pl-10 md:left-1/2"
-              }`}
-            >
+      <section id="experience" className="mt-20 px-4">
+        <h2 className="text-3xl font-bold flex items-center justify-center gap-3 mb-10">
+          <FaBriefcase className="text-orange-500" />
+          Experience
+        </h2>
+        <div className="relative max-w-5xl mx-auto before:content-[''] before:absolute before:w-1 before:bg-indigo-900 before:top-0 before:bottom-0 before:left-1/2 before:-translate-x-1/2 z-0">
+          {experiences.map((exp, index) => {
+            const isLeft = index % 2 === 0;
+            return (
               <div
-                className={`absolute top-3 w-6 h-6 bg-white border-4 border-orange-500 rounded-full z-10 ${
-                  isLeft ? "right-[-12px]" : "left-[-12px]"
+                key={index}
+                className={`relative w-full md:w-1/2 px-4 mb-8 ${
+                  isLeft ? "md:pr-10 md:ml-0 md:left-0" : "md:pl-10 md:left-1/2"
                 }`}
-              />
-              <div className="bg-orange-500 text-white rounded-lg shadow-md p-4">
-                <h2 className="text-lg font-semibold">{exp.company}</h2>
-                <h3 className="text-xl font-bold mt-2">{exp.role}</h3>
-                <p className="text-sm mt-1">{exp.duration}</p>
+              >
+                <div
+                  className={`absolute top-3 w-6 h-6 bg-white border-4 border-orange-500 rounded-full z-10 ${
+                    isLeft ? "right-[-12px]" : "left-[-12px]"
+                  }`}
+                />
+                <div className="bg-orange-500 text-white rounded-lg shadow-md p-4">
+                  <h2 className="text-lg font-semibold">{exp.company}</h2>
+                  <h3 className="text-xl font-bold mt-2">{exp.role}</h3>
+                  <p className="text-sm mt-1">{exp.duration}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-
+            );
+          })}
+        </div>
       <div className="flex justify-center mt-10">
         <a
           href="/experience"
@@ -148,7 +163,7 @@ function Eduction() {
           View All
           <FaArrowRight />
         </a>
-      </div>
+      </div>  
     </section>
 
 

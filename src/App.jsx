@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Home />
       <Contact />
-      <Skil />
       <Eduction />
+      <Skil />
       <Projects />
       <Footer />
       {/* <Landingpage /> */}

@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  background-color: bisque;
   /* place-items: center; */
   /* min-width: 1280px; */
   /* min-height: 100vh; */

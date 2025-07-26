@@ -12,6 +12,8 @@ import SQL from '../assets/sql.png';
 import Postman from '../assets/postman.svg';
 import router from '../assets/router.jpg';
 import CN from '../assets/CN.png';
+import { GiSkills } from "react-icons/gi";
+
 function Skil() {
   const [skills, setSkills] = React.useState([
    {  name: 'HTML',
@@ -116,7 +118,10 @@ function Skil() {
   return (
     <>
      <div className="box  flex-col items-center justify-center p-5 mt-7 flex-wrap text-center">
-      <h1 className='text-3xl font-bold mb-4'>Skills</h1>
+      <div className="flex items-center justify-center font-bold text-3xl mb-4 gap-2 ">
+        <GiSkills  className="text-blue-600 text-4xl  space-2"/>
+      <h1 className=' font-bold '>Skills</h1>
+      </div>
       <p className='text-gray-500 mb-4'>Here are some of the technologies I have worked with:</p>
         <div className="grid grid-cols-3 gap-4 mt-4 ">
           {skills.map((skill, index) => (

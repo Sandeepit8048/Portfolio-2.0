@@ -2,11 +2,19 @@ import React from 'react'
 import Profile from '../assets/profile pic.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
+import Landingpage from './Landingpage'
+import Eduction from './Eduction'
+import Skil from './Skil' 
+import Projects from './Projects'
+import Contact from './Contact'
+import Footer from './Footer'
+import { GiSkills } from 'react-icons/gi'
 import '../Style/Home.css'
 
 function Home() {
   return (
     <>
+    <Landingpage />
       <section className="about p-5 " id="about"  >
           <h2 className="heading text-4xl gap-2 flex items-center justify-center font-bold mb-6">
             <FontAwesomeIcon icon={faUserAlt} className="text-blue-600 text-4l" />
@@ -47,6 +55,11 @@ function Home() {
           </div>
         </div>
       </section>
+       <Eduction/>
+    <Skil />
+    <Projects />
+    <Contact />
+    <Footer />
     </>
   )
 }

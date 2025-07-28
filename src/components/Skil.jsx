@@ -42,7 +42,7 @@ function Skil() {
   ];
 
   return (
-    <div className="p-4 md:p-8 mt-7 flex flex-col items-center justify-center">
+    <div className="p-5 md:p-8 mt-7 flex flex-col items-center justify-center ">
       <div className="flex items-center justify-center font-bold text-3xl mb-4 gap-2 text-center">
         <GiSkills className="text-orange-500 text-4xl" />
         <h1 className="font-bold">Skills</h1>

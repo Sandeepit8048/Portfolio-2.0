@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Todo from '../assets/todo-app.png'
 import Crypto from '../assets/crypto.svg'
-import Ecommerce from '../assets/e-commerce.webp';
+import Ecommerce from '../assets/E-commerce.webp';
 import Web from '../assets/web.webp'
 import car from '../assets/car-finder.jpg'
 import Canteen from '../assets/canteen.webp'

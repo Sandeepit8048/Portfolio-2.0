@@ -8,7 +8,7 @@ import DBMS from '../assets/dbms.png';
 import Next from '../assets/nextjs.webp';
 import java from '../assets/java.png';
 import mongodb from '../assets/mongodb.png';
-import SQL from '../assets/SQL.png';
+// import SQL from '../assets/SQL.png';
 import Postman from '../assets/postman.svg';
 import router from '../assets/router.jpg';
 import CN from '../assets/CN.png';
@@ -86,10 +86,10 @@ function Skil() {
       name: 'java',
       Image: java
     },
-    {
-      name: 'SQL',
-      Image: SQL
-    },
+   {
+  name: 'SQL',
+  Image: 'https://cdn-icons-png.flaticon.com/512/4248/4248443.png'
+},
    {
       name: 'MongoDB',
       Image: mongodb

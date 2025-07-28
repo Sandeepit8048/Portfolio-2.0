@@ -9,7 +9,7 @@ import Next from '../assets/nextjs.webp';
 import java from '../assets/java.png';
 import mongodb from '../assets/mongodb.png';
 // import SQL from '../assets/SQL.png';
-import Postman from '../assets/postman.svg';
+import Postman from '../assets/Postman.svg';
 import router from '../assets/router.jpg';
 import CN from '../assets/CN.png';
 import { GiSkills } from "react-icons/gi";

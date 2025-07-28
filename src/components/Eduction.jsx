@@ -6,6 +6,9 @@ import { FaBriefcase, FaArrowRight } from "react-icons/fa";
 import IMS from '../assets/ims.jpeg';
 import KVN from '../assets/kvn.avif';
 import SHPS from '../assets/shps.jpg';
+// import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 function Eduction() {
  const experiences = [
   {
@@ -33,12 +36,12 @@ function Eduction() {
   return (
     <>
 
-       <section id="experience" className="mt-20 px-4">
+       <section id="experience" className="mt-20 px-4 ">
         <h2 className="text-3xl font-bold flex items-center justify-center gap-3 mb-10">
           <FaBriefcase className="text-orange-500" />
           Experience
         </h2>
-        <div className="relative max-w-5xl mx-auto before:content-[''] before:absolute before:w-1 before:bg-indigo-900 before:top-0 before:bottom-0 before:left-1/2 before:-translate-x-1/2 z-0">
+        <div className="relative max-w-5xl mx-auto before:content-[''] before:absolute before:w-1 before:bg-indigo-900 before:top-0 before:bottom-0 before:left-1/2 before:-translate-x-1/2 z-0 ">
           {experiences.map((exp, index) => {
             const isLeft = index % 2 === 0;
             return (
@@ -76,7 +79,7 @@ function Eduction() {
       </div>  
      </section>
 
-  <div className="card p-5 mt-7 flex flex-col items-center justify-center">
+  <div className="card p-5 mt-7 flex flex-col items-center justify-center  ">
   <div className="flex items-center justify-center text-3xl font-bold mb-4 gap-2">
     <TbCertificate className="text-5xl text-orange-500" />
     <h1 className="text-center">Certifications</h1>
@@ -85,7 +88,7 @@ function Eduction() {
     Here are some of the certifications I have completed:
   </p>
 
-  <div className="certification-list w-full max-w-4xl space-y-6">
+  <div className="certification-list w-full max-w-4xl space-y-6 ">
     {/* Certification 1 */}
     <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6">
       <h2 className="text-xl font-semibold text-indigo-700">Full Stack Development</h2>
@@ -102,7 +105,7 @@ function Eduction() {
     </div>
 
     {/* Certification 2 */}
-    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6">
+    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6  ">
       <h2 className="text-xl font-semibold text-indigo-700">
         JavaScript Algorithms and Data Structures
       </h2>
@@ -111,7 +114,7 @@ function Eduction() {
     </div>
 
     {/* Certification 3 */}
-    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6">
+    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6  ">
       <h2 className="text-xl font-semibold text-indigo-700">Internship</h2>
       <p className="text-gray-700">
         Tejoverse Creative Solutions – Frontend Developer
@@ -130,17 +133,19 @@ function Eduction() {
 </div>
 
 
-         <div className="card p-5 mt-7 flex flex-col items-center justify-center">
-  <div className="flex items-center justify-center font-bold text-3xl mb-4 gap-2">
-    <FcReadingEbook className="text-5xl" />
-    <h1 className="font-bold text-center">Education</h1>
-  </div>
-  <p className="text-gray-500 mb-4 text-center">Here are my educational qualifications:</p>
+   <div className="card p-5 mt-7 flex flex-col items-center justify-center ">
+      <div className="flex items-center justify-center font-bold text-3xl mb-4 gap-2">
+        <FcReadingEbook className="text-5xl" />
+        <h1 className="font-bold text-center">Education</h1>
+      </div>
+      <p className="text-gray-500 mb-4 text-center">Here are my educational qualifications:</p>
 
   <div className="education-list space-y-6 w-full max-w-6xl">
     {/* Education Item 1 */}
     <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md flex flex-col md:flex-row gap-6 items-center">
+  
       <img src={IMS} alt="IMS" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
+     
       <div className="text-center md:text-left">
         <h2 className="text-xl font-semibold">Bachelor of Technology in Information Technology</h2>
         <p className="text-gray-600">Institute: IMSEC, Ghaziabad</p>
@@ -157,7 +162,6 @@ function Eduction() {
         <p className="text-gray-600">Year: 2020</p>
       </div>
     </div>
-
     {/* Education Item 3 */}
     <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md flex flex-col md:flex-row gap-6 items-center">
       <img src={SHPS} alt="SHPS" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />

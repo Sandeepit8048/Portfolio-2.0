@@ -8,10 +8,12 @@ import Footer from './components/Footer'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './App.css'
 import Projects from './components/Projects'
+import { motion } from 'framer-motion';
 
 function App() {
   return (
     <>
+     
       <Navbar />
       <Home />
       <Contact />

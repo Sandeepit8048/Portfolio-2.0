@@ -22,7 +22,7 @@ function TypingSection() {
     };
   }, []);
   return (
-    <div className="relative w-full h-screen overflow-hidden" id="home">
+    <div className="relative h-screen overflow-hidden w-full fixed" id="home">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={bgVideo}

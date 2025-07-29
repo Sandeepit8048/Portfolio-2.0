@@ -11,7 +11,7 @@ function Contact() {
     <>
     {/* <div className=" mt-7 p-5 rounded-lg shadow-md"> */}
       {/* <div className="registion  "> */}
-       <h1 className='flex items-center justify-center text-3xl font-bold mb-4 gap-2 mb-6 '> 
+       <h1 className='flex items-center justify-center text-3xl font-bold mb-4 gap-2 mt-6 '> 
          <FontAwesomeIcon icon={faAddressBook} className="text-blue-600 text-4xl  space-2" />
            Contact<span>Me</span></h1>
                 <p className='text-center text-gray-500 mt-4 text-center'>Feel free to reach out for any queries or collaborations!</p>

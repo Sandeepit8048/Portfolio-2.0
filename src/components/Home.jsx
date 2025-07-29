@@ -14,10 +14,12 @@ import '../Style/Home.css'
 function Home() {
   return (
     <>
-    <div className="home-container mt-2">
+    <div className="home-container mt-1">
     <Landingpage />
     </div>
-      <section className="about p-5 " id="about"  >
+      <section className="about w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-5 rounded-[10px] flex flex-col items-center justify-center mt-4 ">
+  {/* Your content here */}
+
           <h2 className="heading text-4xl gap-2 flex items-center justify-center font-bold mb-6">
             <FontAwesomeIcon icon={faUserAlt} className="text-blue-600 text-4l" />
             About <span>Me</span>

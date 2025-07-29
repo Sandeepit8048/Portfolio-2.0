@@ -22,7 +22,7 @@ function Contact() {
 
            {/* <div className="registrationform "> */}
             <form action="" method="post" className='flex flex-row items-center justify-center flex-wrap items-center justify-center  gap-5 mb-2 '>
-              <div className="form-group  bouder p-4 w-full max-w-md border border-gray-500  rounded-lg shadow-lg bg-yellow-50 ">
+              <div className="form-group  bouder p-4 w-full max-w-md border border-gray-500  rounded-lg shadow-lg bg-yellow-50  mb-5">
                 <h1 className='text-center font-bold text-3xl '>Form</h1>
                 <label htmlFor="name">Name</label>
                <input type="text" id="name" name="name" required  placeholder='username' />  

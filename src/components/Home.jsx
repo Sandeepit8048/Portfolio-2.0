@@ -14,7 +14,9 @@ import '../Style/Home.css'
 function Home() {
   return (
     <>
+    <div className="home-container mt-2">
     <Landingpage />
+    </div>
       <section className="about p-5 " id="about"  >
           <h2 className="heading text-4xl gap-2 flex items-center justify-center font-bold mb-6">
             <FontAwesomeIcon icon={faUserAlt} className="text-blue-600 text-4l" />

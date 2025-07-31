@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FcReadingEbook } from "react-icons/fc";
 import { TbCertificate } from "react-icons/tb";
 import { GiAchievement } from "react-icons/gi";
@@ -10,11 +12,15 @@ import SHPS from '../assets/shps.jpg';
 import { motion } from 'framer-motion';
 // import { motion } from 'framer-motion';
 function Eduction() {
+  useEffect(() => {
+     AOS.init({ duration: 2000 });
+   }, []);
  const experiences = [
   {
     company: "Self Employed",
     role: "Full Stack Developer",
     duration: "Oct 2023 - present",
+    
   },
   {
     company: "Tejoverse Creative Solutions",
@@ -47,9 +53,13 @@ function Eduction() {
             return (
               <div
                 key={index}
+                data-aos={isLeft ? "slide-up" : "slide-down"} 
                 className={`relative w-full md:w-1/2 px-4 mb-8  ${
                   isLeft ? "md:pr-10 md:ml-0 md:left-0" : "md:pl-10 md:left-1/2"
                 }`}
+                
+                 
+
               >
                 <div
                   className={`absolute top-3 w-6 h-6 bg-white border-4 border-orange-500 rounded-full z-10 ${
@@ -79,9 +89,10 @@ function Eduction() {
       </div>  
      </section>
 
-  <div className="card p-5 mt-7 flex flex-col items-center justify-center  ">
+  <div  data-aos="fade-left" className="card p-5 mt-7 flex flex-col items-center justify-center  ">
   <div className="flex items-center justify-center text-3xl font-bold mb-4 gap-2">
     <TbCertificate className="text-5xl text-orange-500" />
+    
     <h1 className="text-center">Certifications</h1>
   </div>
   <p className="text-gray-500 mb-6 text-center">

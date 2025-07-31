@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+// import React from 'react';
 import Img from '../assets/HTML5_logo.webp';
 import CSS from '../assets/css.webp';
 import Tailwind from '../assets/tailwind.webp';
@@ -12,6 +13,8 @@ import Postman from '../assets/Postman.svg';
 import router from '../assets/router.jpg';
 import CN from '../assets/CN.png';
 import { GiSkills } from "react-icons/gi";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Skil() {
   const skills = [
@@ -38,8 +41,13 @@ function Skil() {
     { name: 'Vercel', Image: 'https://vercel.com/favicon.ico' },
     { name: 'Postman', Image: Postman },
     { name: 'React Router', Image: router },
-    { name: 'Computer Networks', Image: CN }
+    { name: 'Computer Networks', Image: CN,  }
   ];
+  
+  
+    useEffect(() => {
+      AOS.init({ duration: 1200 });
+    }, []);
 
   return (
     <div className="p-5 md:p-8 mt-7 flex flex-col items-center justify-center ">
@@ -52,7 +60,7 @@ function Skil() {
       </p>
 
       {/* Responsive grid: 2 cols on small, 3 on md, 4 on lg */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-7xl">
+      <div  data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full max-w-7xl">
         {skills.map((skill, index) => (
           <div
             key={index}
@@ -61,6 +69,8 @@ function Skil() {
             <img
               src={skill.Image}
               alt={skill.name}
+              draggable="false"
+              data-aos="zoom-out"
               className="w-20 h-20 sm:w-24 sm:h-24 object-contain mb-2"
             />
             <h2 className="text-md font-semibold">{skill.name}</h2>

@@ -11,6 +11,9 @@ import Projects from './components/Projects'
 import Landingpage from './components/Landingpage'
 import Footer from './components/Footer'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import AboutSection from './components/AboutSection';
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
         <Route path="/footer" element={<Footer />} />
       </Routes>
     </Router>
+    {/* <AboutSection /> */}
    
    </>
   );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { motion } from 'framer-motion';
 
+
 function Navbar() {
   return (
     <div className="bg-gray-400 shadow-md w-full top-0 left-0 z-50">

@@ -5,12 +5,34 @@ import Img from '../assets/contactimg.png';
 import Img2 from '../assets/img2.avif';
 import '../Style/Home.css'; 
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import emailjs from 'emailjs-com';
+
+
 function Contact() {
   
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+      emailjs.sendForm(
+        'service_pegdqee',      // from EmailJS dashboard
+        'template_f1zwdch',     // from EmailJS dashboard
+        e.target,               // HTML form element
+        'S7as_04vCv3xGYVhg' // from EmailJS account
+      ).then(
+        (result) => {
+          console.log('Email successfully sent!', result.text);
+          alert('Message sent successfully!');
+          e.target.reset(); // clear the form
+        },
+        (error) => {
+          console.error('Email send failed:', error.text);
+          alert('Failed to send message.');
+        }
+      );
+    };
   return (
     <>
-    {/* <div className=" mt-7 p-5 rounded-lg shadow-md"> */}
-      {/* <div className="registion  "> */}
+    
        <h1 className='flex items-center justify-center text-3xl font-bold mb-4 gap-2 mt-6 '> 
          <FontAwesomeIcon icon={faAddressBook} className="text-blue-600 text-4xl  space-2" />
            Contact<span>Me</span></h1>
@@ -21,7 +43,8 @@ function Contact() {
                     </div>
 
            {/* <div className="registrationform "> */}
-            <form action="" method="post" className='flex flex-row items-center justify-center flex-wrap items-center justify-center  gap-5 mb-2 '>
+           
+            <form onSubmit={handleSubmit} method="post" className='flex flex-row items-center justify-center flex-wrap items-center justify-center  gap-5 mb-2 '>
               <div className="form-group  bouder p-4 w-full max-w-md border border-gray-500  rounded-lg shadow-lg bg-yellow-50  mb-5">
                 <h1 className='text-center font-bold text-3xl '>Form</h1>
                 <label htmlFor="name">Name</label>
@@ -33,6 +56,7 @@ function Contact() {
               <label htmlFor="message">Message</label>
               <textarea id="message" name="message" rows="4" required placeholder='Type your message here...'></textarea>
               <button type="submit" className='btn bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition'>Send Message</button>
+              {/* <input type="submit" name="submit" id="" /> */}
               </div>
               <div className="image-container w-[392px] h-[450px] ">
                 <DotLottieReact

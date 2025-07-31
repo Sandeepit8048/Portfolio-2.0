@@ -16,6 +16,7 @@
     "@lottiefiles/dotlottie-react": "^0.14.4",
     "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/vite": "^4.1.11",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.10",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.525.0",

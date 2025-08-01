@@ -89,7 +89,7 @@ function Eduction() {
       </div>  
      </section>
 
-  <div  data-aos="fade-left" className="card p-5 mt-7 flex flex-col items-center justify-center  ">
+  <div   className="card p-5 mt-7 flex flex-col items-center justify-center  ">
   <div className="flex items-center justify-center text-3xl font-bold mb-4 gap-2">
     <TbCertificate className="text-5xl text-orange-500" />
     
@@ -101,7 +101,7 @@ function Eduction() {
 
   <div className="certification-list w-full max-w-4xl space-y-6 ">
     {/* Certification 1 */}
-    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6">
+    <div data-aos="flip-up" className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6">
       <h2 className="text-xl font-semibold text-indigo-700">Full Stack Development</h2>
       <p className="text-gray-700">Platform: Udemy</p>
       <p className="text-gray-700">Year: 2022</p>
@@ -116,7 +116,7 @@ function Eduction() {
     </div>
 
     {/* Certification 2 */}
-    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6  ">
+    <div data-aos="flip-up" className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6  ">
       <h2 className="text-xl font-semibold text-indigo-700">
         JavaScript Algorithms and Data Structures
       </h2>
@@ -125,7 +125,7 @@ function Eduction() {
     </div>
 
     {/* Certification 3 */}
-    <div className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6  ">
+    <div data-aos="flip-up" className="certification-item bg-gray-100 hover:bg-gray-200 transition rounded-lg shadow-md p-6  ">
       <h2 className="text-xl font-semibold text-indigo-700">Internship</h2>
       <p className="text-gray-700">
         Tejoverse Creative Solutions – Frontend Developer
@@ -155,7 +155,7 @@ function Eduction() {
     {/* Education Item 1 */}
     <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md flex flex-col md:flex-row gap-6 items-center">
   
-      <img src={IMS} alt="IMS" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
+      <img data-aos='flip-up' src={IMS} alt="IMS" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
      
       <div className="text-center md:text-left">
         <h2 className="text-xl font-semibold">Bachelor of Technology in Information Technology</h2>
@@ -166,7 +166,7 @@ function Eduction() {
 
     {/* Education Item 2 */}
     <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md flex flex-col md:flex-row gap-6 items-center">
-      <img src={KVN} alt="KVN" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
+      <img data-aos='flip-up' src={KVN} alt="KVN" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
       <div className="text-center md:text-left">
         <h2 className="text-xl font-semibold">High School</h2>
         <p className="text-gray-600">School: Kvn Public School, Varanasi</p>
@@ -175,7 +175,7 @@ function Eduction() {
     </div>
     {/* Education Item 3 */}
     <div className="education-item bg-gray-200 p-4 rounded-lg shadow-md flex flex-col md:flex-row gap-6 items-center">
-      <img src={SHPS} alt="SHPS" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
+      <img data-aos='flip-up' src={SHPS} alt="SHPS" className="w-full md:w-[400px] h-[150px] object-cover rounded-lg" />
       <div className="text-center md:text-left">
         <h2 className="text-xl font-semibold">School (1st to 10th Class)</h2>
         <p className="text-gray-600">School: Swami Harsewanand Public School, Varanasi</p>

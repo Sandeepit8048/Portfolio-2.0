@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Todo from '../assets/todo-app.png';
 import Crypto from '../assets/crypto.svg';
 import Ecommerce from '../assets/E-commerce.webp';
@@ -6,8 +6,14 @@ import Web from '../assets/web.webp';
 import car from '../assets/car-finder.jpg';
 import Canteen from '../assets/canteen.webp';
 import { GoProjectSymlink } from 'react-icons/go';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Projects() {
+  useEffect(() => {
+        AOS.init({ duration: 1200 });
+      }, []);
+  
   const [projects] = useState([
     {
       title: 'To-Do App',
@@ -67,7 +73,7 @@ function Projects() {
 
       <p className="text-gray-500 mb-6 text-center max-w-xl">Here are some of my projects:</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+      <div data-aos="fade-up" className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -82,6 +88,8 @@ function Projects() {
               <img
                 src={project.Image}
                 alt={project.title}
+                draggable="false"
+              data-aos="zoom-out" 
                 className="w-full h-40 object-contain mb-4 rounded"
               />
             )}

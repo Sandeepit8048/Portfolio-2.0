@@ -1,36 +1,40 @@
-import React, { useRef } from 'react';
+import React, { useEffect,useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import emailjs from 'emailjs-com';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Img from '../assets/contactimg.png';
 import '../Style/Home.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Contact() {
-  const formRef = useRef();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_eqs6euf',        // Replace with your actual service ID
-        'template_f1zwdch',       // Replace with your template ID
-        formRef.current,
-        'S7as_04vCv3xGYVhg'       // Replace with your public key
-      )
-      .then(
-        (result) => {
-          console.log('Email successfully sent!', result.text);
-          alert('Message sent successfully!');
-          formRef.current.reset();
-        },
-        (error) => {
-          console.error('Email send failed:', error.text);
-          alert('Failed to send message.');
-        }
-      );
-  };
+   useEffect(() => {
+          AOS.init({ duration: 1200 });
+        }, []);
+    
+   const formRef = useRef();
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      emailjs
+        .sendForm(
+          'service_eqs6euf',        // Replace with your actual service ID
+          'template_f1zwdch',       // Replace with your template ID
+          formRef.current,
+          'S7as_04vCv3xGYVhg'       // Replace with your public key
+        )
+        .then(
+          (result) => {
+            console.log('Email successfully sent!', result.text);
+            alert('Message sent successfully!');
+            formRef.current.reset();
+          },
+          (error) => {
+            console.error('Email send failed:', error.text);
+            alert('Failed to send message.');
+          }
+        );
+    };
 
   return (
     <>
@@ -47,13 +51,14 @@ function Contact() {
         </a>
       </p>
 
-      <div className="flex items-center justify-center">
-        <img src={Img} alt="Description" className="w-90" />
+      <div  className="flex items-center justify-center">
+        <img data-aos="flip-up" src={Img} alt="Description" className="w-90" />
       </div>
 
       <form
         ref={formRef}
         onSubmit={handleSubmit}
+        data-aos="fade-up"
         className="flex flex-row items-center justify-center flex-wrap gap-5 mb-2"
       >
         <div className="form-group p-4 w-full max-w-md border border-gray-500 rounded-lg shadow-lg bg-yellow-50 mb-5">

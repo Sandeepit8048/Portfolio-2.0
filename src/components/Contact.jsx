@@ -52,7 +52,7 @@ function Contact() {
       </p>
 
       <div  className="flex items-center justify-center">
-        <img data-aos="flip-up" src={Img} alt="Description" className="w-90" />
+        <img data-aos="slide-up" src={Img} alt="Description" className="w-90" />
       </div>
 
       <form

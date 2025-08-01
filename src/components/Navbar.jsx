@@ -1,16 +1,26 @@
-// Navbar.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { motion } from 'framer-motion';
-
+import { Menu, X } from 'lucide-react';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/education', label: 'Education' },
+    { path: '/skills', label: 'Skills' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
   return (
-    <div className="bg-gray-400 shadow-md w-full top-0 left-0 z-50">
+    <header className="bg-gray-800 text-white shadow-md w-full sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-[80px]">
 
-        {/* Animation */}
         <div className="w-[100px] h-[60px] flex items-center">
           <motion.div
             initial={{ x: '-100%' }}
@@ -26,17 +36,41 @@ function Navbar() {
           </motion.div>
         </div>
 
-        {/* Navigation Links */}
-        <ul className="flex space-x-5 text-lg font-semibold flex-wrap items-center">
-          <li><Link to="/" className="hover:text-white">Home</Link></li>
-          <li><Link to="/education" className="hover:text-white">Education</Link></li>
-          <li><Link to="/skills" className="hover:text-white">Skills</Link></li>
-          <li><Link to="/projects" className="hover:text-white">Projects</Link></li>
-          <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+        <ul className="hidden md:flex space-x-6 text-lg font-medium">
+          {navLinks.map(({ path, label }) => (
+            <li key={path}>
+              <Link
+                to={path}
+                className="hover:text-gray-300 transition duration-200"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
-    </div>
+
+      {menuOpen && (
+        <div className="md:hidden px-4 pb-4 bg-gray-700 space-y-3">
+          {navLinks.map(({ path, label }) => (
+            <Link
+              key={path}
+              to={path}
+              className="block text-white hover:text-gray-300 font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </header>
   );
 }
 

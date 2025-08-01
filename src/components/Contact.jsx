@@ -65,7 +65,7 @@ function Contact() {
           <h1 className="text-center font-bold text-3xl">Form</h1>
 
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Username" />
+          <input type="text" id="name" name="name" required placeholder="username" />
 
           <label htmlFor="email">E-mail</label>
           <input type="email" id="email" name="email" required placeholder="Email" />

@@ -16,13 +16,19 @@
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
   background-color: color-mix(in srgb, color percentage, color percentage);
+  
 }
 .image img {
   max-width: 100%;
   height: auto;
   border-radius: 17px;
 } 
-
+.image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  filter: brightness(0.9);
+  color: #000000;
+}
 .content {
   flex: 2;
 }
